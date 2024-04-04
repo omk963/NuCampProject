@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg in oklab, rgb(158, 230, 254), rgb(109, 99, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#patient-form {
+    width: 50%;
+    margin-top: 20%;
+    border: 1px black solid;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px;
+    background-color: rgba(255, 255, 255, 0.981);
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px black solid;
+    width: 45%;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    width: 20%;
+}
+
+#dm-q {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#health-questions {
+    display: none;
+}
+
+#age {
+    text-align: center;
+}
+
+#questions-format {
+    display: flex;
+    flex-direction: column;
+}
+
+#dm-data,
+#age {
+    display: none;
+}
+
+.dm-data-row {
+    flex-direction: row;
+    width: 100%;
+}
+
+#generate, #myChart {
+    display: none;
+}
+
+#myChart {
+    width: 50%;
+    border: 1px black solid;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px;
+    background-color: rgba(255, 255, 255, 0.981);
+    margin-top: 20%;
+}

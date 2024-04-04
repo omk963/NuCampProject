@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="script.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <title>Diabetes Tracker</title>
+    </head>
+
+    <body>
+        <form id="patient-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required />
+            </div>
+            <div id="age">
+                <br />
+                <p id="prnt-age"></p>
+            </div>
+            <div id="health-questions">
+                <div class="form-group" id="questions-format">
+                    <br />
+                    <label for="dm">Are you Diabetic?</label>
+                    <div id="dm-q">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="dm"
+                                id="dm-yes"
+                                value="yes"
+                            />
+                            <label class="form-check-label" for="dm-yes"
+                                >Yes</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="dm"
+                                id="dm-no"
+                                value="no"
+                            />
+                            <label class="form-check-label" for="dm-no"
+                                >No</label
+                            >
+                        </div>
+                    </div>
+                    <div id="dm-data">
+                        <div class="dm-data-row">
+                            <label for="date"></label>
+                            <input type="date" class="glu-date" />
+                            <label for="glu"></label>
+                            <input type="number" class="glucose" min="0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <button
+                type="submit"
+                class="btn btn-primary"
+                id="submit"
+                onclick="calculateAge()"
+                >Submit</button
+            >
+            <button
+                type="submit"
+                class="btn btn-primary"
+                id="generate"
+                onclick="generateGraph()"
+                >Generate</button
+            >
+        </form>
+
+        <canvas id="myChart"></canvas>
+    </body>
+</html>
